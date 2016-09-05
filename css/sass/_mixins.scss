@@ -1,0 +1,82 @@
+
+/*---------- COLOURS ----------*/
+
+	$black: #000000;
+	$white: #FFFFFF;
+
+
+/*---------- VARIABLES ----------*/
+	
+	$max-width: 1140px;
+
+
+/*---------- CLEARFIX ----------*/
+
+	%cf {
+		&:before,
+		&:after {
+	    	content: " ";
+	    	display: table;
+		}
+
+		&:after {
+	    	clear: both;
+		}
+	}
+
+/*---------- MAXIMUM WIDTH ----------*/
+
+	%max-width {
+		box-sizing: border-box;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: $max-width;
+		width: 96%;
+	}
+
+
+
+/*---------- FONTS ----------*/
+
+	@font-face {
+	  font-family: 'Trade Gothic';
+	  src: url('./fonts/tg-bold.woff2') format('woff2'),
+	  	   url('./fonts/tg-bold.woff') format('woff');
+	}
+
+	@font-face {
+	  font-family: 'Publico Bold';
+	  src: url('./fonts/publico-bold.woff2') format('woff2'),
+	  	   url('./fonts/publico-bold.woff') format('woff');
+	}
+
+	@font-face {
+	  font-family: 'Publico Roman';
+	  src: url('./fonts/publico-roman.woff2') format('woff2'),
+	  	   url('./fonts/publico-roman.woff') format('woff');
+	}
+
+
+
+/*---------- TRANSFORX X ----------*/
+
+	@mixin transformX($translate: -50%, $left: 50%) {
+		-webkit-transform: 	translateX($translate);
+		-moz-transform: 	translateX($translate);
+		-o-transform: 		translateX($translate);
+		-ms-transform: 		translateX($translate);
+		transform: 			translateX($translate);
+
+		left: $left;
+	}
+
+
+/*---------- TRANSITION ----------*/
+
+	@mixin transition($elem: all, $time: 250ms, $ease: ease) {
+	 	-webkit-transition: $elem $time $ease;
+		-moz-transition: 	$elem $time $ease;
+		-ms-transition: 	$elem $time $ease;
+		-o-transition: 		$elem $time $ease;
+		transition: 		$elem $time $ease;
+	}

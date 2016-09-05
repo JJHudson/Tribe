@@ -1,0 +1,23 @@
+.title {
+	font-family: 'Trade Gothic', Impact, Helvetica, Arial, Sans-Serif;
+	font-size: 46px;
+	letter-spacing: 1px;
+	line-height: 46px;
+	margin-bottom: 50px;
+	text-align: center;
+	text-transform: uppercase;
+
+	@include media('<tablet') {
+		font-size: 36px;
+		line-height: 36px;
+		margin-bottom: 40px;
+	}
+}
+
+.title--double-margin {
+	margin-bottom: 100px;
+
+	@include media('<tablet') {
+		margin-bottom: 40px;
+	}
+}

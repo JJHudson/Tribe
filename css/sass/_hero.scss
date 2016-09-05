@@ -1,0 +1,69 @@
+.hero {
+	@extend %cf;
+
+	position: relative;
+}
+
+.hero__logo {
+	left: 0;
+	max-width: 200px;
+	position: absolute;
+	top: 75px;
+	width: 50%;
+
+	@include media('<tablet') {
+		top: 50px;
+		width: 30%;
+	}
+}
+
+.svgs {
+	margin-left: -156px;
+	max-width: 1110px;
+
+	
+
+	@include media('<tablet') {
+		margin-left: -19%;
+		width: 110%;
+	}
+}
+
+.hero__svg {
+	//@include transformX(-44.9%, 50%);
+
+	margin-top: 75px;
+	max-width: 1584px;
+	position: absolute;
+	left: -12.5;
+	top: 0;
+	width: 150%;
+
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	path {
+		stroke-miterlimit: 10;
+		stroke-width: 0.17;
+	}
+
+	@include media('<tablet') {
+		margin-top: 50px;
+		//width: 160%;
+	}
+}
+
+.hero__svg--large {
+	position: relative;
+}
+
+.hero__path {
+	fill: none;
+	position: relative;
+}
+
+.hero__stroke {
+	stroke-width: 0.2px;
+}

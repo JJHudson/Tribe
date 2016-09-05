@@ -1,0 +1,67 @@
+.side__svg {
+	position: absolute;
+
+	path {
+		stroke-miterlimit: 10;
+		stroke-width: 0.17;
+	}
+
+	@include media('<tablet') {
+		top: 25px;
+		width: 160%;
+	}
+}
+
+.side__svg--small {
+	margin-top: 87%;
+	left: -40%;
+	top: 0;
+	width: 30%;
+
+	@include media('<desktop') {
+		margin-top: 67%;
+		left: -22%;
+	}
+
+	@include media('<tablet') {
+		display: none;
+	}
+}
+
+.side__svg--medium {
+	margin-top: 30%;
+	right: -100%;
+	top: 0;
+	width: 80%;
+
+	@include media('<desktop') {
+		right: -67%;
+	}
+
+	@include media('<tablet') {
+		display: none;
+	}
+
+	path {
+		stroke-width: 0.1;
+	}
+}
+
+.side__svg--large {
+	margin-top: -23%;
+	left: -95%;
+	top: 0;
+	width: 80%;
+
+	@include media('<desktop') {
+		left: -68%;
+	}
+
+	@include media('<tablet') {
+		display: none;
+	}
+
+	path {
+		stroke-width: 0.1;
+	}
+}

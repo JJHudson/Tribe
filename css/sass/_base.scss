@@ -1,0 +1,66 @@
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	color: $black;
+	font: 16px/22px 'Publico Roman', Arial, Sans-Serif;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width: 100%;
+}
+
+p {
+	text-align: center;
+
+	&.small {
+		color: #A29F9F;
+		font-size: 11px;
+		line-height: 13px;
+	}
+
+	&.large {
+		font-size: 24px;
+		line-height: 35px;
+		margin: 0 auto 25px;
+		width: 75%;
+
+		@include media('<tablet') {
+			font-size: 19px;
+			line-height: 29px;
+			width: 80%;
+		}
+	}
+}
+
+.wrapper {
+	overflow-x: hidden !important;
+	width: 100% !important;
+}
+
+.container {
+	@include transformX();
+
+	margin: 0;
+	max-width: 850px;
+	position: relative;
+	width: 90%;
+}
+
+.container--absolute {
+	position: absolute;
+}
+
+.divider {
+	@include transformX();
+
+	margin-bottom: 100px;
+	margin-top: 100px;
+	position: relative;
+
+	@include media('<tablet') {
+		margin-bottom: 50px;
+		margin-top: 50px;
+	}
+}
